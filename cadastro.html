@@ -1,0 +1,25 @@
+<!-- public/cadastro.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastrar Associado</title>
+  <link rel="stylesheet" href="css/cadastro.css" />
+</head>
+<body>
+  <body>
+    <h1>Cadastro de Associado</h1>
+  
+    <form id="form-cadastro">
+      <input type="text" id="nome" placeholder="Nome completo" required /><br />
+      <input type="text" id="plano" placeholder="Plano (Ex: Ouro, Prata...)" required /><br />
+      <input type="date" id="expiracao" required /><br />
+      <input type="text" id="beneficios" placeholder="Benefícios (separados por vírgula)" required /><br />
+      <button type="submit">Cadastrar</button>
+    </form>
+  
+    <script type="module" src="./src/cadastro.js"></script>
+  </body>
+</body>
+</html>
