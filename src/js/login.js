@@ -1,4 +1,4 @@
-import { auth } from "../firebase";
+import { auth } from "../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, senha);
-      window.location.href = "/cadastro.html";
+      window.location.href = "../html/cadastro.html";
     } catch (err) {
       erro.textContent = "Email ou senha inválidos.";
     }
