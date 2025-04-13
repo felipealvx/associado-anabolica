@@ -17,10 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (associado) {
       const dados = associado.data();
       resultado.innerHTML = `
-        <h2>${dados.nome}</h2>
-        <p>Plano: ${dados.plano}</p>
-        <p>Benefícios: ${dados.beneficios.join(", ")}</p>
-        <p>Expira em: ${dados.expiracao}</p>
+        <div style="border: 1px solid #ccc; padding: 10px; margin-top: 10px; border-radius: 5px;">
+          <h2>${dados.nome}</h2>
+          <p>Plano: ${dados.plano}</p>
+          <p>Benefícios: ${dados.beneficios.join(", ")}</p>
+          <p>Expira em: ${dados.expiracao}</p>
+        </div>
       `;
     } else {
       resultado.innerText = "Associado não encontrado.";

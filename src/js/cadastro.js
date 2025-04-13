@@ -15,21 +15,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const nome = document.getElementById("nome").value;
     const plano = document.getElementById("plano").value;
     const expiracao = document.getElementById("expiracao").value;
     const beneficios = document.getElementById("beneficios").value.split(",").map(b => b.trim());
 
-    await addDoc(collection(db, "associados"), {
-      nome,
-      plano,
-      expiracao,
-      beneficios,
-      criadoEm: serverTimestamp()
-    });
+    if (!file) {
+      alert("Por favor, selecione uma imagem.");
+      return;
+    }
 
-    alert("Associado cadastrado com sucesso!");
-    form.reset();
+    try {
+      await addDoc(collection(db, "associados"), {
+        nome,
+        plano,
+        expiracao,
+        beneficios,
+        criadoEm: serverTimestamp()
+      });
+  
+      alert("Associado cadastrado com sucesso!");
+      form.reset();
+    } catch (error){
+      console.error("Erro ao cadastrar associado!", error);
+      alert("Erro ao cadastrar associado. Tente novamente.");
+    }
   });
 });
