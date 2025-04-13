@@ -22,8 +22,8 @@ body {
 .header {
   width: 100%;
   background-image: linear-gradient(to right, #10748d, #8ecae6);
-  padding: 40px 20px;
   position: relative;
+  padding: 40px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,6 +61,11 @@ body {
   align-items: center;
   gap: 10px;
 
+  .consulta {
+    background-color: #ffb300;
+    color: #10748d;
+  }
+  
   a {
     border-radius: 2px;
     color: whitesmoke;
@@ -80,6 +85,7 @@ body {
     color: #10748d;
   }
 }
+
 
 /* --------------------------- busca --------------------------- */
 

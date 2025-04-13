@@ -17,11 +17,12 @@
       <p class="subtitle">Associação Acadêmica Atlética Anabólica do curso de educação física da Universidade Regional do Cariri campus Iguatu.</p>
       
       <div class="links-uteis">
-        <a href="" class="instagram">Instagram</a>
+        <a href="https://instagram.com/atleticanabolica" class="instagram">Instagram</a>
         <a href="" class="email">E-mail</a>
         <a href="" class="produtos">Produtos</a>
         <a href="" class="whatsapp">WhatsApp</a>
         <a href="" class="beneficios">Benefícios ao ser um associado</a>
+        <a href="" class="consulta" id="consulta">Consultar associado</a>
       </div>
 
       <div class="patrocinadores">
@@ -29,22 +30,21 @@
         <img src="" alt="">
       </div>
 
-      <div class="cracha" hidden>
+      <div class="cracha" id="cracha" hidden>
         <h2>Buscar Crachá do Associado</h2>
       
         <div class="input-content">
           <input type="text" id="busca" placeholder="Digite seu nome completo..." />
           <button id="buscar">Buscar</button>
+          <a href="/src/html/login.html" class="header-link">Login</a>
         </div>
       
         <div id="resultado"></div>
       </div>
     </div>
-    <a href="/src/html/login.html" class="header-link" hidden>Login</a>
   </div>
 
-  
-
   <script type="module" src="./src/js/busca.js"></script>
+  <script type="module" src="./src/js/modal.js"></script>
 </body>
 </html>

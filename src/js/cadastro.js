@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       alert("Acesso restrito. Faça login como admin.");
-      window.location.href = "/login.html";
+      window.location.href = "../html/login.html";
     }
   });
 
@@ -19,11 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const plano = document.getElementById("plano").value;
     const expiracao = document.getElementById("expiracao").value;
     const beneficios = document.getElementById("beneficios").value.split(",").map(b => b.trim());
-
-    if (!file) {
-      alert("Por favor, selecione uma imagem.");
-      return;
-    }
 
     try {
       await addDoc(collection(db, "associados"), {

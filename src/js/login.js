@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, senha);
-      window.location.href = "../html/cadastro.html";
+      window.location.href = "../html/admin.html";
     } catch (err) {
       erro.textContent = "Email ou senha inválidos.";
     }
