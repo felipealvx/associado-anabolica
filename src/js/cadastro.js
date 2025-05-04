@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       alert("Acesso restrito. Faça login como admin.");
-      window.location.href = "../html/login.html";
+      window.location.href = "../public/login.html";
     }
   });
 
